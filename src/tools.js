@@ -2,7 +2,7 @@
  * @Description:
  * @Autor: shen
  * @Date: 2020-08-17 16:17:41
- * @LastEditTime: 2020-08-18 10:32:50
+ * @LastEditTime: 2020-08-18 11:08:25
  */
 const cardTypeMap = {
   DC: '储蓄卡',
@@ -99,6 +99,7 @@ function _getBankInfoByCardNoAsync(cardNo, cbf) {
   let errMsg = ''
   _getBankInfoByCardNo(cardNo, function (err, info) {
     if (!err && info) {
+      console.log(module)
       return cbf(null, info)
     } else {
       let https = require('https')
